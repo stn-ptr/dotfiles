@@ -1,0 +1,7 @@
+[user]
+	email = 34418806+stn-ptr@users.noreply.github.com
+	name = stn-ptr
+[core]
+	pager = less -FRX
+[init]
+	defaultBranch = main
