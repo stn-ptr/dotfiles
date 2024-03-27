@@ -1,0 +1,9 @@
+source $VIMRUNTIME/defaults.vim
+
+set expandtab
+set shiftwidth=4
+set autoindent
+
+set number
+set relativenumber
+
