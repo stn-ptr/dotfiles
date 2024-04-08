@@ -10,3 +10,9 @@ zstyle :compinstall filename '/home/sebastian/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+if [ -n $(command -v zoxide) ]
+then
+    eval "$(zoxide init zsh)"
+fi
+
