@@ -1,3 +1,8 @@
+if [ -z "$SSH_AUTH_SOCK" ]
+then
+    eval $(ssh-agent)
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -17,12 +22,6 @@ zstyle :compinstall filename '/home/sebastian/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-if [ -z "$SSH_AUTH_SOCK" ]
-then
-    eval $(ssh-agent)
-fi
-
 
 if [ -d "$HOME/.oh-my-zsh" ]
 then
@@ -50,4 +49,3 @@ if [ -d "$HOME/.local/bin" ]
 then
   export PATH="$HOME/.local/bin:$PATH"  
 fi
-
