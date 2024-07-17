@@ -1,6 +1,9 @@
-if [ -z "$SSH_AUTH_SOCK" ]
+RUNNING_AGENTS=$(ps -ef | grep ssh-agent | grep -v grep | wc -l)
+if (( RUNNING_AGENTS < 1 ))
 then
     eval $(ssh-agent)
+else
+    echo "ssh agent already running"
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
