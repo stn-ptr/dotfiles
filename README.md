@@ -10,7 +10,7 @@ Configuration files for various environments
 ## Usage
 
 1. Clone this repository, usually to ~/.dotfiles
-2. Link dotfiles `stow -d .dotfiles --dot-files <PACKAGE>`
+2. Link dotfiles `stow -d .dotfiles --dotfiles <PACKAGE>`
 
 ## ToDo
 
