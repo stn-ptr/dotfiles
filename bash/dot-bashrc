@@ -116,6 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ -d "$HOME/.asdf" ]
+then
+    source "$HOME/.asdf/asdf.sh"
+    source "$HOME/.asdf/completions/asdf.bash"
+fi
+
 if [ -z "$SSH_AUTH_SOCK" ]
 then
   eval $(ssh-agent)

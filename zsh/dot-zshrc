@@ -22,6 +22,12 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/sebastian/.zshrc'
 
+if [ -d "$HOME/.asdf" ]
+then
+    source "$HOME/.asdf/asdf.sh"
+    fpath=(${ASDF_DIR}/completions $fpath)
+fi
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
