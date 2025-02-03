@@ -55,6 +55,10 @@ sudo apt install stow
 
 2. Link dotfiles `stow -d .dotfiles --dotfiles <PACKAGE>`
 
+### local configuration
+
+For .bashrc there is a way to add local configurations in ~/.bashrc.local, which is not supposed to be checked in. This file will be sourced if it exists.
+
 ## ToDo
 
 * Install script
