@@ -124,11 +124,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -d "$HOME/.asdf" ]
-then
-    source "$HOME/.asdf/asdf.sh"
-    source "$HOME/.asdf/completions/asdf.bash"
-fi
+. <(asdf completion bash)
 
 if [ -z "$SSH_AUTH_SOCK" ]
 then
