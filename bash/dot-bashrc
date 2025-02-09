@@ -124,7 +124,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. <(asdf completion bash)
+if [ -n "$(command -v asdf)" ]; then
+    . <(asdf completion bash)
+fi
 
 if [ -z "$SSH_AUTH_SOCK" ]
 then
