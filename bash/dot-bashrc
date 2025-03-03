@@ -134,6 +134,6 @@ then
 fi
 
 if [ -f ~/.bashrc.local ]; then
-    . ~/.bashrc.local
+    source ~/.bashrc.local
 fi
 
