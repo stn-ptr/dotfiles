@@ -24,8 +24,7 @@ zstyle :compinstall filename '/home/sebastian/.zshrc'
 
 if [ -d "$HOME/.asdf" ]
 then
-    source "$HOME/.asdf/asdf.sh"
-    fpath=(${ASDF_DIR}/completions $fpath)
+    export PATH="${ASDF_DATA_DIRi:-$HOME/.asdf}/shims:$PATH"
 fi
 
 autoload -Uz compinit
